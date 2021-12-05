@@ -14,7 +14,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 `timescale 1ns/10ps
 
-module fulladd #(
+module fulladder #(
     parameter width = 2
 ) (
     input [width:0] a,

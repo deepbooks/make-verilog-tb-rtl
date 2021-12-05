@@ -12,7 +12,7 @@ target:
 	vvp $(OUT)
 
 netlist:
-	yosys -q -p "prep -top $(NAME); write_json $(JSON)" $(SRC) || exit 1
+	yosys -q -p "prep -top fulladder; write_json $(JSON)" $(SRC) || exit 1
 	netlistsvg $(JSON) -o $(SVG)
 
 sim:

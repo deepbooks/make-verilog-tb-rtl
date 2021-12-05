@@ -14,7 +14,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 `timescale 1ns / 10ps
 
-module fulladd_tb;
+module fulladder_tb;
     localparam width = 2;
     // 1. Declare testbench variables
     reg [width:0] a;
@@ -24,9 +24,9 @@ module fulladd_tb;
     integer i;
 
     // 2. Instantiate the design and connect to testbench variables
-    fulladd #(
+    fulladder #(
         .width (width)
-    ) fa0 (
+    ) FULLADDER (
         .a (a),
         .b (b),
         .c_in (c_in),
@@ -50,7 +50,7 @@ module fulladd_tb;
         end
 
         $dumpfile("fulladder_tb.vcd");
-        $dumpvars(0, fulladd_tb); // all vars dump
+        $dumpvars(0, fulladder_tb); // all vars dump
 
         #50 $finish;
     end
