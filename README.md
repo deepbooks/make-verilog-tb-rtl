@@ -24,4 +24,6 @@ Make svg file to view netlist.
 make netlist
 ```
 
-![Full Adder](fulladder.png)
+![Figure 001. fulladder](001-fulladder/fulladder.png)
+
+Figure 001. fulladder
