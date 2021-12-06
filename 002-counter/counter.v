@@ -21,11 +21,12 @@ module counter # (
         input   rstn,
         output  reg [width - 1:0]       out
 );
-    always @ (posedge clk) begin
-        if (!rstn) begin
+    always @(posedge clk) begin
+        if(!rstn) begin
             out <= out + 1;
-        end else
+        end else begin
             out <= 0;
+        end
     end
 
 endmodule
